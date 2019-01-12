@@ -23,12 +23,11 @@ html lang='en-us'
             = link_to destroy_admin_session_path, method: :delete do
               i.fa.fa-sign-out
 
-    aside#left-panel
-      = render partial: 'admin/shared/menu'
-      span.minifyme
-        i.fa.fa-arrow-circle-left.hit
+    .container-fluid
+      .row.d-flex
+        .col-md-2.d-none.d-md-block.bg-dark.sidebar.pt-5
+          = render partial: 'admin/shared/menu'
 
-    #main role='main'
-      #content
-        = render partial: 'notifications'
-        = yield
+        main.col-md-9.ml-sm-auto.col-lg-10.pt-3.px-4 role='main'
+          = render partial: 'notifications'
+          = yield

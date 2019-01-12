@@ -15,3 +15,8 @@
 //= require js/app
 //= require main
 //= require admin/referrers
+
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
